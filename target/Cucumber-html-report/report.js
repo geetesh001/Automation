@@ -1,14 +1,22 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("src/test/resources/featureFiles/login.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("loginWithData.feature");
 formatter.feature({
   "line": 1,
-  "name": "Login to facebook application",
+  "name": "login with login data",
   "description": "",
-  "id": "login-to-facebook-application",
+  "id": "login-with-login-data",
   "keyword": "Feature"
+});
+formatter.before({
+  "duration": 482500,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 29500,
+  "status": "passed"
 });
 formatter.background({
   "line": 3,
-  "name": "Launching chrome browser",
+  "name": "open browser",
   "description": "",
   "type": "background",
   "keyword": "Background"
@@ -22,34 +30,63 @@ formatter.match({
   "location": "StepDefinition.lunchBrowser()"
 });
 formatter.result({
-  "duration": 94272200,
+  "duration": 126552800,
   "status": "passed"
 });
 formatter.scenario({
-  "line": 6,
-  "name": "Login facebook with valid credential",
+  "line": 17,
+  "name": "login to facebook with inline data",
   "description": "",
-  "id": "login-to-facebook-application;login-facebook-with-valid-credential",
+  "id": "login-with-login-data;login-to-facebook-with-inline-data",
   "type": "scenario",
-  "keyword": "Scenario"
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "line": 16,
+      "name": "@Test"
+    }
+  ]
 });
 formatter.step({
-  "line": 7,
+  "line": 18,
   "name": "Open facebook page",
   "keyword": "Given "
 });
 formatter.step({
-  "line": 8,
-  "name": "Enter valid username and password",
+  "line": 19,
+  "name": "Enter valid username and password with below data",
+  "rows": [
+    {
+      "cells": [
+        "geetesh-table",
+        "test-table"
+      ],
+      "line": 20
+    },
+    {
+      "cells": [
+        "data zero",
+        "password zero"
+      ],
+      "line": 21
+    },
+    {
+      "cells": [
+        "data one",
+        "password one"
+      ],
+      "line": 22
+    }
+  ],
   "keyword": "Then "
 });
 formatter.step({
-  "line": 9,
+  "line": 23,
   "name": "Click on login button",
   "keyword": "And "
 });
 formatter.step({
-  "line": 10,
+  "line": 24,
   "name": "user should be able to login to facebook",
   "keyword": "Then "
 });
@@ -57,25 +94,36 @@ formatter.match({
   "location": "StepDefinition.openStartingPage()"
 });
 formatter.result({
-  "duration": 63700,
+  "duration": 76600,
   "status": "passed"
 });
 formatter.match({
-  "location": "StepDefinition.enterCredential()"
+  "location": "StepDefinition.dataFromTable(DataTable)"
 });
 formatter.result({
-  "duration": 93400,
+  "duration": 1216000,
   "status": "passed"
 });
 formatter.match({
   "location": "StepDefinition.clickButton()"
 });
 formatter.result({
-  "duration": 53800,
+  "duration": 35300,
   "status": "passed"
 });
-formatter.match({});
+formatter.match({
+  "location": "StepDefinition.verify()"
+});
 formatter.result({
-  "status": "undefined"
+  "duration": 39000,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 32800,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 72200,
+  "status": "passed"
 });
 });
