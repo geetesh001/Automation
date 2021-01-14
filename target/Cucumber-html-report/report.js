@@ -7,11 +7,11 @@ formatter.feature({
   "keyword": "Feature"
 });
 formatter.before({
-  "duration": 482500,
+  "duration": 579000,
   "status": "passed"
 });
 formatter.before({
-  "duration": 29500,
+  "duration": 47900,
   "status": "passed"
 });
 formatter.background({
@@ -30,7 +30,7 @@ formatter.match({
   "location": "StepDefinition.lunchBrowser()"
 });
 formatter.result({
-  "duration": 126552800,
+  "duration": 88636900,
   "status": "passed"
 });
 formatter.scenario({
@@ -94,36 +94,36 @@ formatter.match({
   "location": "StepDefinition.openStartingPage()"
 });
 formatter.result({
-  "duration": 76600,
+  "duration": 41600,
   "status": "passed"
 });
 formatter.match({
   "location": "StepDefinition.dataFromTable(DataTable)"
 });
 formatter.result({
-  "duration": 1216000,
+  "duration": 1296800,
   "status": "passed"
 });
 formatter.match({
   "location": "StepDefinition.clickButton()"
 });
 formatter.result({
-  "duration": 35300,
+  "duration": 42900,
   "status": "passed"
 });
 formatter.match({
   "location": "StepDefinition.verify()"
 });
 formatter.result({
-  "duration": 39000,
+  "duration": 45000,
   "status": "passed"
 });
 formatter.after({
-  "duration": 32800,
+  "duration": 36000,
   "status": "passed"
 });
 formatter.after({
-  "duration": 72200,
+  "duration": 33300,
   "status": "passed"
 });
 });
