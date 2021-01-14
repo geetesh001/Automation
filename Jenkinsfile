@@ -3,7 +3,7 @@ node {
 		git "https://github.com/geetesh001/Automation.git"
 		}
 	stage ('Build'){
-    	dir("comtest") {
+    	dir("Automation") {
 	   sh "mvn clean install"
        }
 		}
