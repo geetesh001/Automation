@@ -14,7 +14,7 @@ import org.junit.runner.RunWith;
         strict = false, //
         /*if strict option is set to false then at execution time if cucumber encounters any undefined/pending
         steps then cucumber does not fail the execution and undefined steps are skipped and BUILD is SUCCESSFUL.*/
-        tags = {"@Test"}
+        tags = {"@smoke"}
 )
 
 @RunWith(Cucumber.class)

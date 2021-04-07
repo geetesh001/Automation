@@ -5,29 +5,42 @@ import cucumber.api.DataTable;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.util.List;
+import java.util.Set;
+import java.util.concurrent.TimeUnit;
 
 public class StepDefinition {
 
+    WebDriver driver;
     @Given("^Launch Chrome browser$")
     public void lunchBrowser(){
         System.out.println("Launching chrome browser");
+        System.setProperty("webdriver.chrome.driver","C:\\Users\\Geetesh\\IdeaProjects\\Automation\\lib\\chromedriver.exe");
+        driver= new ChromeDriver();
+        driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
     }
 
     @Given("^Open facebook page$")
     public void openStartingPage(){
-        System.out.println("Open facebook page");
+        driver.get("https://facebook.com");
     }
 
     @Then("^Enter valid username and password$")
     public void enterCredential(){
         System.out.println("Entering login credential");
+        driver.findElement(By.xpath("//input[@name='email']")).sendKeys("test");
+        driver.findElement(By.xpath("//input[@name='pass']")).sendKeys("test pass");
     }
 
     @And("^Click on login button$")
     public void clickButton(){
         System.out.println("clicking login button");
+
     }
 
     @Then("^user should be able to login to facebook$")

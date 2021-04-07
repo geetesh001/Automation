@@ -3,6 +3,7 @@ Feature: Login to facebook application
 Background: Launching chrome browser
   Given Launch Chrome browser
 
+  @smoke
 Scenario: Login facebook with valid credential
   Given Open facebook page
   Then Enter valid username and password
